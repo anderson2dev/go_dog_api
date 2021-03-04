@@ -1,0 +1,14 @@
+{
+    "name": "default",
+    "type" : "postgres",
+    "port": 7001,
+    "host" : "localhost",
+    "migrations" : [
+        "./src/domain/db/migrations/*.ts"
+    ],
+    "username": "go_dog_api",
+    "password":"go_dog_food",
+    "cli" : {
+        "migrationsDir": "./src/domain/db/migrations"
+    }
+}
