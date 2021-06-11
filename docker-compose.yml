@@ -1,0 +1,19 @@
+version: "3"
+
+services: 
+    database:
+        container_name: "go_dog_db"
+        image: "postgres"
+        ports: 
+            - 6063:5432
+        env_file: 
+            - ./POSTGRES_DB.ENV
+    dev_db:
+        container_name: "go_dog_dev_db"
+        image: "postgres"
+        ports:
+            - 6064:5432
+        env:
+            - POSTGRES_DB=go_dog_dev_db
+            - POSTGRES_USER=good_dog
+            - POSTGRES_PASSWORD=Star1234
